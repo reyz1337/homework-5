@@ -1,5 +1,6 @@
 *{
     transition: all .1s ease-in; 
+    box-sizing: border-box;
     line-height: 1;
 }
 body{
@@ -7,12 +8,12 @@ body{
 }
 .header{
     background-color: #4A4F56;
-    height: 82px;
+    min-height: 82px;
     min-width: 793px;
 }
 .header .container {
     width: 280px;
-    height: 82px;
+    min-height: 82px;
     margin: 0 auto;
     text-align: center;
     font-size: 16px;
@@ -57,8 +58,8 @@ main{
     content: ')';
 }
 ul li{
-    min-height: 45px;
-    border: 3px solid transparent;
+    min-height: 51px;
+    border: 1px solid transparent;
     border-left: none;
     border-right: none;
     display: flex;
@@ -67,15 +68,9 @@ ul li{
 }
 li:nth-child(odd) {
     background-color: #88839E;
-    padding-left: 12px;
 }
 li:nth-child(even) {
     background-color: #7A7593;
-    padding-left: 12px;
-}
-input[type="checkbox"]{
-    height: 20px;
-    width: 20px;
 }
 .wish{
     min-width: 534px;
@@ -90,23 +85,51 @@ input[type="checkbox"]{
     color: #FF8984;
     font-family: 'Roboto', sans-serif;
 }
-ul li:hover{
+label{
+    border: 3px solid transparent;
+    width: 546px;
+    min-height: 45px;
+    padding: 5px 12px;
+}
+ul li label:hover{
     background-color: #625E77;
     border: 3px solid #fff;
     border-left: none;
     border-right: none;
 }
-ul li:active {
+ul li label:active {
     background-color: #FF8984;
 }
 ul li label{
     display: flex;
+    position: relative;
+    justify-content: flex-start;
+    padding: 5px 12px;
     align-items: center;
 }
 ul li .text{
         display: flex;
         align-items: center;
         position: relative;
+}
+ul li label input{
+    margin-right: 16px;
+    appearance: none;
+}
+ul li label input::before{
+    content: ' ';
+    width: 19px;
+    height: 19px;
+    background-color: #fff;
+    display: flex;
+}
+ul li label input:checked::before{
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 [type="checkbox"]:checked~.text::before {
     content: '';
@@ -118,4 +141,4 @@ ul li .text{
 }
 [type="checkbox"]:checked~.text{
     opacity: .25;
-} 
+}

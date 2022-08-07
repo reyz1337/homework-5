@@ -10,11 +10,10 @@ body{
 .header{
     background-color: #4A4F56;
     min-height: 82px;
-    min-width: 793px;
+    padding-top: 23px;
 }
 .header .container {
-    width: 280px;
-    min-height: 82px;
+    min-width: 280px;
     margin: 0 auto;
     text-align: center;
     font-size: 16px;
@@ -23,12 +22,8 @@ body{
 }
 .header h1{
     font-size: 24px;
-    padding-top: 23px;
-    padding-bottom: 9px;
+    margin-bottom: 8px;
     font-weight: 700;
-}
-.header h2{
-    margin-bottom: 12px;
 }
 main{
     background-color: #3B3F45;
@@ -42,6 +37,8 @@ main{
 .list .container{
     color: #fff;
     font-family: 'Roboto', sans-serif;
+    margin-bottom: 45px;
+    max-width: 535px;
 }
 .list .container span{
     display: flex;
@@ -74,11 +71,11 @@ li:nth-child(even) {
 }
 .wish{
     min-width: 534px;
-    height: 45px;
+    min-height: 45px;
     background-color: #4A4F56;
     align-items: center;
     display: flex;
-    margin-top: 45px;
+    padding: 10px 15px;
 }
 .wish h3{
     margin: 0 auto;
@@ -90,6 +87,7 @@ label{
     width: 546px;
     min-height: 45px;
     padding: 5px 12px;
+    cursor: pointer;
 }
 ul li label:hover{
     background-color: #625E77;
@@ -115,6 +113,7 @@ ul li .text{
 ul li label input{
     margin-right: 16px;
     appearance: none;
+    cursor: pointer;
 }
 ul li label input::before{
     content: ' ';

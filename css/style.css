@@ -11,9 +11,10 @@ body{
     background-color: #4A4F56;
     min-height: 82px;
     padding-top: 23px;
+    padding-bottom: 12px;
 }
 .header .container {
-    min-width: 280px;
+    max-width: 280px;
     margin: 0 auto;
     text-align: center;
     font-size: 16px;
@@ -32,12 +33,12 @@ main{
 }
 .list{
     margin: 0 auto;
-    width: 535px;
+    justify-content: center;
+    display: flex;
 }
 .list .container{
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 45px;
     max-width: 535px;
 }
 .list .container span{
@@ -54,6 +55,9 @@ main{
 }
 .comment::after{
     content: ')';
+}
+.container ul{
+    margin-bottom: 45px;
 }
 ul li{
     min-height: 45px;
